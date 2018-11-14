@@ -10,7 +10,7 @@
         <package name="io.shardingsphere.example.spring.boot.mybatis.entity"/>
     </typeAliases>
     <mappers>
-        <mapper resource="META-INF/mappers/OrderMapper.xml"/>
-        <mapper resource="META-INF/mappers/OrderItemMapper.xml"/>
+    <!--    <mapper resource="META-INF/mappers/OrderMapper.xml"/>
+        <mapper resource="META-INF/mappers/OrderItemMapper.xml"/>-->
     </mappers>
 </configuration>

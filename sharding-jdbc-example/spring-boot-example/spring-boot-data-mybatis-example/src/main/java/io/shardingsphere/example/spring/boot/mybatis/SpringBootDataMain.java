@@ -17,17 +17,18 @@
 
 package io.shardingsphere.example.spring.boot.mybatis;
 
-import io.shardingsphere.example.spring.boot.mybatis.service.DemoService;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ConfigurableApplicationContext;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "io.shardingsphere.example.spring.boot.mybatis")
+@MapperScan(value = "io.shardingsphere.example.spring.boot.mybatis.repository")
 public class SpringBootDataMain {
-    
+
     public static void main(final String[] args) {
-        try (ConfigurableApplicationContext applicationContext = SpringApplication.run(SpringBootDataMain.class, args)) {
+       /* try (ConfigurableApplicationContext applicationContext = SpringApplication.run(SpringBootDataMain.class, args)) {
             applicationContext.getBean(DemoService.class).demo();
-        }
+        }*/
+        SpringApplication.run(SpringBootDataMain.class, args);
     }
 }
