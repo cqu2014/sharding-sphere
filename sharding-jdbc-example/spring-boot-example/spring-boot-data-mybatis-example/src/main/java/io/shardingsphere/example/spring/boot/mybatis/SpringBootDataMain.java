@@ -22,7 +22,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication(scanBasePackages = "io.shardingsphere.example.spring.boot.mybatis")
-@MapperScan(value = "io.shardingsphere.example.spring.boot.mybatis.repository")
+@MapperScan(value = "io.shardingsphere.example.spring.boot.mybatis.mapper")
 public class SpringBootDataMain {
 
     public static void main(final String[] args) {

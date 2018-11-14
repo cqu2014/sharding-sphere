@@ -1,4 +1,4 @@
-package io.shardingsphere.example.spring.boot.mybatis.repository;
+package io.shardingsphere.example.spring.boot.mybatis.mapper;
 
 import io.shardingsphere.example.spring.boot.mybatis.entity.OrderItemEntity;
 import org.springframework.stereotype.Repository;
