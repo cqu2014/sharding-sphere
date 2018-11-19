@@ -29,7 +29,7 @@ public class OrderServiceImpl  implements IOrderService {
     @Override
     public void addOrder(OrderEntity orderEntity) {
         orderEntityMapper.insertSelective(orderEntity);
-        log.info("订单插入成功orderId={}",orderEntity.getOrderId());
+        log.info("订单插入成功orderId={}",JSON.toJSON(orderEntity));
     }
 
     @Override

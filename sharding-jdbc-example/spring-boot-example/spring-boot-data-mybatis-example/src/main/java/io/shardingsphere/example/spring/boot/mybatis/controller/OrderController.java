@@ -28,4 +28,12 @@ public class OrderController {
         return "OK";
     }
 
+    @GetMapping(value = "delete")
+    public Object delete(){
+        /**
+         * 全部删除如何分表
+         */
+        return "OK";
+    }
+
 }
