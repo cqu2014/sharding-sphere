@@ -12,21 +12,21 @@
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
     select 
     <include refid="Base_Column_List" />
-    from t_order_item_0
+    from t_order_item
     where order_item_id = #{orderItemId,jdbcType=BIGINT}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
-    delete from t_order_item_0
+    delete from t_order_item
     where order_item_id = #{orderItemId,jdbcType=BIGINT}
   </delete>
   <insert id="insert" parameterType="io.shardingsphere.example.spring.boot.mybatis.entity.OrderItemEntity" >
-    insert into t_order_item_0 (order_item_id, order_id, user_id
+    insert into t_order_item (order_item_id, order_id, user_id
       )
     values (#{orderItemId,jdbcType=BIGINT}, #{orderId,jdbcType=BIGINT}, #{userId,jdbcType=INTEGER}
       )
   </insert>
   <insert id="insertSelective" parameterType="io.shardingsphere.example.spring.boot.mybatis.entity.OrderItemEntity" >
-    insert into t_order_item_0
+    insert into t_order_item
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="orderItemId != null" >
         order_item_id,
@@ -51,7 +51,7 @@
     </trim>
   </insert>
   <update id="updateByPrimaryKeySelective" parameterType="io.shardingsphere.example.spring.boot.mybatis.entity.OrderItemEntity" >
-    update t_order_item_0
+    update t_order_item
     <set >
       <if test="orderId != null" >
         order_id = #{orderId,jdbcType=BIGINT},
@@ -63,7 +63,7 @@
     where order_item_id = #{orderItemId,jdbcType=BIGINT}
   </update>
   <update id="updateByPrimaryKey" parameterType="io.shardingsphere.example.spring.boot.mybatis.entity.OrderItemEntity" >
-    update t_order_item_0
+    update t_order_item
     set order_id = #{orderId,jdbcType=BIGINT},
       user_id = #{userId,jdbcType=INTEGER}
     where order_item_id = #{orderItemId,jdbcType=BIGINT}
