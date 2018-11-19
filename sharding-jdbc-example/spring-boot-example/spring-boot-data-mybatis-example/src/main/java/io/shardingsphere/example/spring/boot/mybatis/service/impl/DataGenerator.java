@@ -33,7 +33,6 @@ public class DataGenerator {
             iOrderService.addOrder(orderEntity);
 
             orderItemEntity.setOrderId(orderId);
-            orderItemEntity.setOrderId(orderId);
             orderItemEntity.setUserId(orderEntity.getUserId());
             iOrderService.addOrderItem(orderItemEntity);
         }
